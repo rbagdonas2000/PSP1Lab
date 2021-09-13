@@ -65,6 +65,11 @@ public class ValidatorTests {
     }
 
     @Test
+    void TestNumberLengthValidationByCountryCode(){
+        assertTrue(phoneValidator.ValidateNumberLenghtByCountryCode("LT", "+37060545484"));
+    }
+
+    @Test
     void TestAtSymbol(){
         assertTrue(emailValidator.ContainsAtSymbol("r.bagdonas@gmail.com"));
     }

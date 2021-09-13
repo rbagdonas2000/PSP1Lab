@@ -13,4 +13,6 @@ public class PhoneValidator {
     public String ValidateOtherCountryNumbers(String countryCode, String phoneNumber){
         return "";
     }
+
+    public boolean ValidateNumberLenghtByCountryCode(String countryCode, String phoneNumber) { return false;}
 }
