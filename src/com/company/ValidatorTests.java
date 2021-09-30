@@ -1,4 +1,4 @@
-package com.company;
+/*package com.company;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -93,4 +93,4 @@ public class ValidatorTests {
     void tearDown(){
 
     }
-}
+}*/
