@@ -4,7 +4,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AdditionalValidatorTests {
 
@@ -27,5 +26,20 @@ public class AdditionalValidatorTests {
     @Test
     void validateEmail_emailDoesNotHaveRecipientsName_shouldReturnFalse(){
         assertFalse(emailValidator.validateEmail("@gmail.com"));
+    }
+
+    @Test
+    void validateEmail_emailDoesNotHaveValidDomainName_shouldReturnFalse(){
+        assertFalse(emailValidator.validateEmail("rokas@gm*il.com"));
+    }
+
+    @Test
+    void validateEmail_emailsDomainNameStartsWithDash_shouldReturnFalse(){
+        assertFalse(emailValidator.validateEmail("rokas@-gmail.com"));
+    }
+
+    @Test
+    void validateEmail_emailsDomainNameIsEmpty_shouldReturnFalse(){
+        assertFalse(emailValidator.validateEmail("rokas@.com"));
     }
 }
